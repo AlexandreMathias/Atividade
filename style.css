@@ -12,44 +12,54 @@ body {
     background-size: cover;
     color: #fff;
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Cabeçalho */
 header {
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 header .logo h1 {
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
 header nav ul {
     list-style: none;
     margin-top: 20px;
+    padding: 0;
 }
 
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #ff6f61;
+    transform: scale(1.1);
 }
 
 /* Seções principais */
@@ -57,30 +67,37 @@ section {
     padding: 40px 20px;
     margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
+    border-radius: 15px;
     max-width: 900px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     text-align: center;
     margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff6f61;
 }
 
 section p {
     font-size: 1.2rem;
     text-align: center;
     line-height: 1.6;
+    margin-bottom: 20px;
 }
 
-/* Efeitos no hover */
+/* Links */
 section a {
     color: #ff6f61;
     text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 section a:hover {
     text-decoration: underline;
+    transform: translateY(-2px);
 }
 
 /* Rodapé */
@@ -88,11 +105,16 @@ footer {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     text-align: center;
-    padding: 15px;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+footer p {
+    margin-top: 10px;
 }
 
 /* Responsividade */
@@ -101,8 +123,19 @@ footer {
         font-size: 2rem;
     }
 
+    header nav ul {
+        text-align: center;
+        padding: 0;
+    }
+
     header nav ul li {
         display: block;
         margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 15px;
+        margin: 10px;
+        width: 90%;
     }
 }
